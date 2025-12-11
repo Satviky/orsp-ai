@@ -9,3 +9,5 @@ This was my first try in making this thing work, but at that time transformer wa
 
 Later on I made new folder and was able to get proper and compatible version for transformer and python to be used.
 
+## Why you added it here?
+I added here, because if someone is not able to understand what error is, or after amny tries the error persist then they can use this. Even without AI, it pretty much does the same thing. [It is also faster.]

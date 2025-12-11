@@ -1,13 +1,36 @@
 # Important
 
-These files are not included in the project. They are here just in case AI model throws an error then to replace the entire main root with this.
+These files are not included in the project. They are backup implementation of the job-matching engine. It was created during early development of the project when transformer model had compatibility issues due to version mismatch.
 
 ---
 
 ## What exactly is this?
-This was my first try in making this thing work, but at that time transformer was throw some error and it was due to version mismatch and after downgrading and upgrading many modules, I gave up that and made this fallback system.
+First working prototype of the matching system that uses lightweight string based approach instad of transformer model.
 
-Later on I made new folder and was able to get proper and compatible version for transformer and python to be used.
+Features:
+    - Skill Extraction from text
+    - Job candidate matching
+    - Fast approx scoring.
 
-## Why you added it here?
-I added here, because if someone is not able to understand what error is, or after amny tries the error persist then they can use this. Even without AI, it pretty much does the same thing. [It is also faster.]
+## Why is this folder added?
+I added this folder as safety layer in case:
+    - main AI model fails to load
+    - System throws version related errors.
+    - Someone wants to run project without GPU/AI dependencies
+    - Quick testing is required without downloading heavy modules.
+
+## Project structure:
+```
+ai_engine/
+├── ai/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── ai_engine.py
+│   ├── job_matcher.py
+│   ├── resume_reader.py
+│   └── skill_extractor.py
+├── uploads/
+├── venv/
+└── app.py
+```
+

@@ -1,4 +1,4 @@
-
+# I think it will be better in a folder, but abhi ek hi file hai, where there will be multiple file I will move all these to a folder.
 from transformers import AutoModel, AutoTokenizer
 from keybert import KeyBERT
 import PyPDF2

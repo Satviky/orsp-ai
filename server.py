@@ -16,7 +16,7 @@ app = Flask(__name__)
 # Load a REAL HuggingFace transformer model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-@app.route("/semantic-match", methods=["POST"])
+@app.route("/match", methods=["POST"])
 def semantic_match():
     try:
         data = request.json
@@ -49,7 +49,7 @@ def home():
 @app.post("/extract")
 def extract_endpoint():
     file = request.files["file"]
-    path = f"D:/orsp/ai_one/tmp/{file.filename}" #loc
+    path = f"D:/orsp/ai_one/tmp/{file.filename}" # location where the resume will be saved 
     file.save(path)
 
     text = extract_text_from_pdf(path)
@@ -62,4 +62,5 @@ def extract_endpoint():
 
 if __name__ == "__main__":
     print("Loading model…")
-    app.run(port=5005)
+    app.run(port=5000)
+
